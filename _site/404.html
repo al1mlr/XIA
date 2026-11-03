@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X-IA — Les alumni de l&#39;X qui pratiquent l&#39;IA</title>
+  <meta name="description" content="X-IA est le groupe des alumni de l&#39;École Polytechnique experts, pratiquants et passionnés par l&#39;intelligence artificielle. Soirées techniques, enregistrements, communauté.">
+  <meta name="theme-color" content="#030e26">
+  <meta property="og:title" content="X-IA — Les alumni de l&#39;X qui pratiquent l&#39;IA">
+  <meta property="og:description" content="X-IA est le groupe des alumni de l&#39;École Polytechnique experts, pratiquants et passionnés par l&#39;intelligence artificielle. Soirées techniques, enregistrements, communauté.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Netlify Identity : nécessaire pour que les invitations du CMS (/admin) fonctionnent -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/" aria-label="X-IA">
+        <img src="/assets/img/logo-x-ia.png" alt="" width="34" height="34">
+        <span class="brand__name">X-IA</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-fr">
+          <svg class="ico" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false"><path d="M3 6h14M3 10h14M3 14h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg><span class="sr">Menu</span>
+        </button>
+        <ul class="nav__list" id="menu-fr">
+          <li><a href="/#about">Qui sommes-nous</a></li>
+          <li><a href="/#events">Événements</a></li>
+          <li><a href="/#supporters">Soutiens</a></li>
+          <li><a href="/#contact">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <a href="/" hreflang="fr" lang="fr" data-lang-link="fr" aria-current="true">FR</a>
+        <a href="/en/" hreflang="en" lang="en" data-lang-link="en">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="plain"><div class="wrap">
+  <h1 class="h2">Page introuvable · Page not found</h1>
+  <p>Cette page n&#39;existe pas (ou plus). / This page does not exist (any more).</p>
+  <p><a class="link-arrow" href="/">Retour à l&#39;accueil</a> · <a class="link-arrow" href="/en/">Back to the homepage</a></p>
+</div></section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p class="foot__line">© 2026 X-IA — Groupe de l&#39;AX · Association loi 1901 · Paris</p>
+      <ul class="foot__links">
+        <li><a href="https://youtube.com/playlist?list=PLrRN3yszYHZlpsbIQXg-gqA_FnTp6AQC6" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.linkedin.com/company/x-ia" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:alain.meller@polytechnique.org">alain.meller@polytechnique.org</a></li>
+        <li><a href="#top">Haut de page</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function () { document.location.href = "/admin/"; });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

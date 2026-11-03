@@ -1,0 +1,14 @@
+{
+  "name": "xia-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site bilingue (FR/EN) du groupe X-IA — AX, École Polytechnique Alumni",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "js-yaml": "^4.1.0"
+  }
+}
