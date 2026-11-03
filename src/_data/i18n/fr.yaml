@@ -1,0 +1,97 @@
+meta:
+  title: "X-IA — Les alumni de l'X qui pratiquent l'IA"
+  description: "X-IA est le groupe des alumni de l'École Polytechnique experts, pratiquants et passionnés par l'intelligence artificielle. Soirées techniques, enregistrements, communauté."
+nav:
+  about: "Qui sommes-nous"
+  events: "Événements"
+  supporters: "Soutiens"
+  contact: "Contacts"
+  menu: "Menu"
+hero:
+  eyebrow: "Groupe de l'AX · Depuis 2018"
+  title: "X-IA"
+  lead: "Le groupe des alumni de l'École Polytechnique experts, pratiquants et passionnés par l'intelligence artificielle."
+  tagline: "Des échanges techniques, pragmatiques. Sans bullshit."
+  cta_events: "Voir les événements"
+  cta_join: "Nous rejoindre"
+  facts:
+    - value: "2018"
+      label: "création"
+    - value: "1 700+"
+      label: "membres actifs"
+    - value: "8–10"
+      label: "soirées par an"
+    - value: "100–200"
+      label: "participants par soirée"
+about:
+  eyebrow: "Qui sommes-nous"
+  headline: "No bullshit."
+  statement: "Notre valeur fondatrice : des échanges profondément techniques, pragmatiques, tournés vers les réalités du terrain. Chaque présentation suit un processus de revue rigoureux."
+  mission: "Fédérer la communauté des anciens élèves de l'École Polytechnique et de leurs associés, qui travaillent dans l'intelligence artificielle ou s'y passionnent. Le résultat : une communauté de confiance où décideurs et experts partagent librement leurs retours d'expérience sur la mise en production de l'IA."
+  facts:
+    - term: "Statut"
+      text: "Groupe de l'AX, l'association des anciens élèves de Polytechnique, et association loi 1901 sans but lucratif."
+    - term: "Format"
+      text: "8 à 10 soirées par an : 3 à 4 présentations de chercheurs et d'entreprises, suivies d'un cocktail dînatoire pour échanger."
+    - term: "Captation"
+      text: "Chaque soirée est filmée, accessible aux membres et sur notre chaîne YouTube publique, au-delà du cercle des polytechniciens."
+    - term: "Règles du jeu"
+      text: "Aucune activité lucrative, aucun sujet confessionnel ou politique."
+events:
+  title: "Nos événements"
+  intro: "Chaque soirée réunit chercheurs et entreprises autour d'un sujet précis. Les présentations sont filmées et publiées."
+  all_label: "Toutes les captations sur YouTube"
+  speakers: "Intervenants"
+  watch: "Voir l'enregistrement"
+  playlist: "Retrouver sur YouTube"
+  archive: "Événements précédents"
+  no_image: "Visuel à venir"
+supporters:
+  title: "Ils soutiennent notre action"
+  intro: "Ces entreprises financent nos soirées, accueillent l'événement dans leurs locaux ou prennent en charge le cocktail. Merci à elles."
+  cta_text: "Votre entreprise veut soutenir X-IA ?"
+  cta_link: "Parlons-en"
+contact:
+  title: "Contacts"
+  join:
+    kicker: "Vous avez fait l'X ?"
+    title: "Comment nous rejoindre"
+    intro: "Élèves et anciens élèves de l'École Polytechnique, travaillant dans l'IA ou passionnés par le sujet : l'adhésion se fait en ligne."
+    steps:
+      - "Faites votre demande sur le site de l'AX, depuis la page du groupe X-IA."
+      - "Le secrétaire valide votre candidature. Vous êtes informé des activités et pouvez vous inscrire librement aux soirées."
+      - "Facultatif : devenez membre votant en réglant la cotisation annuelle (10 € par an, payée sur le site de l'AX) pour participer à l'assemblée générale et aux votes."
+    note: "La cotisation n'est pas obligatoire pour assister aux soirées."
+    button: "Faire ma demande sur le site de l'AX"
+    other: "Pas passé par l'X ? Écrivez-nous pour proposer une présentation ou soutenir X-IA."
+  form:
+    title: "Contactez-nous"
+    intro: "Une thématique à voir aborder, une présentation à proposer, un soutien à apporter ? Écrivez-nous."
+    name: "Nom"
+    email: "Email"
+    organisation: "Organisation (facultatif)"
+    subject: "Sujet"
+    subjects:
+      - { value: "presentation", label: "Proposer une présentation" }
+      - { value: "support", label: "Soutenir X-IA" }
+      - { value: "join", label: "Rejoindre X-IA" }
+      - { value: "other", label: "Autre" }
+    message: "Message"
+    submit: "Envoyer"
+    sending: "Envoi en cours…"
+    success: "Merci, votre message est bien parti. Nous revenons vers vous rapidement."
+    error: "L'envoi a échoué. Écrivez-nous directement à"
+    privacy: "Vos données servent uniquement à répondre à votre message."
+footer:
+  line: "Groupe de l'AX · Association loi 1901 · Paris"
+  youtube: "YouTube"
+  linkedin: "LinkedIn"
+  top: "Haut de page"
+notfound:
+  title: "Page introuvable"
+  text: "Cette page n'existe pas (ou plus)."
+  back: "Retour à l'accueil"
+thanks:
+  title: "Message envoyé"
+  text: "Merci, nous revenons vers vous rapidement."
+  back: "Retour à l'accueil"

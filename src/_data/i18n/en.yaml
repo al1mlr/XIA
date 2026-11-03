@@ -1,0 +1,97 @@
+meta:
+  title: "X-IA — Polytechnique alumni who practise AI"
+  description: "X-IA is the group of École Polytechnique alumni who are experts, practitioners and enthusiasts of artificial intelligence. Technical evenings, recordings, community."
+nav:
+  about: "About us"
+  events: "Events"
+  supporters: "Supporters"
+  contact: "Contact"
+  menu: "Menu"
+hero:
+  eyebrow: "An AX group · Since 2018"
+  title: "X-IA"
+  lead: "The group of École Polytechnique alumni who are experts, practitioners and enthusiasts of artificial intelligence."
+  tagline: "Technical, pragmatic exchanges. No bullshit."
+  cta_events: "See the events"
+  cta_join: "Join us"
+  facts:
+    - value: "2018"
+      label: "founded"
+    - value: "1,700+"
+      label: "active members"
+    - value: "8–10"
+      label: "evenings a year"
+    - value: "100–200"
+      label: "attendees per evening"
+about:
+  eyebrow: "About us"
+  headline: "No bullshit."
+  statement: "Our founding value: deeply technical, pragmatic exchanges grounded in real-world practice. Every talk goes through a rigorous review process."
+  mission: "To bring together École Polytechnique alumni and their associates who work in, or are passionate about, artificial intelligence. The result: a community of trust where decision-makers and experts openly share what it really takes to put AI into production."
+  facts:
+    - term: "Status"
+      text: "A group of the AX, the École Polytechnique alumni association, and a non-profit association under the French law of 1901."
+    - term: "Format"
+      text: "8 to 10 evenings a year: 3 to 4 talks from researchers and companies, followed by a buffet reception to talk it over."
+    - term: "Recordings"
+      text: "Every evening is filmed and made available to members and on our public YouTube channel, beyond the Polytechnique circle."
+    - term: "Ground rules"
+      text: "No for-profit activity, no religious or political topics."
+events:
+  title: "Our events"
+  intro: "Each evening brings researchers and companies together around one precise topic. Talks are filmed and published."
+  all_label: "All recordings on YouTube"
+  speakers: "Speakers"
+  watch: "Watch the recording"
+  playlist: "Find it on YouTube"
+  archive: "Previous events"
+  no_image: "Visual coming soon"
+supporters:
+  title: "They support our work"
+  intro: "These companies fund our evenings, host the event in their premises or cover the reception. Thank you."
+  cta_text: "Does your company want to support X-IA?"
+  cta_link: "Let's talk"
+contact:
+  title: "Contact"
+  join:
+    kicker: "A Polytechnique graduate?"
+    title: "How to join us"
+    intro: "Current students and alumni of École Polytechnique, working in AI or passionate about it: membership is handled online."
+    steps:
+      - "Send your request on the AX website, from the X-IA group page."
+      - "The secretary validates your application. You are kept informed of our activities and can register freely for the evenings."
+      - "Optional: become a voting member by paying the annual fee (€10 a year, paid on the AX website) to take part in the general assembly and in votes."
+    note: "The fee is not required to attend the evenings."
+    button: "Request membership on the AX website"
+    other: "Not an X? Write to us to propose a talk or to support X-IA."
+  form:
+    title: "Get in touch"
+    intro: "A topic you would like us to cover, a talk to propose, support to offer? Write to us."
+    name: "Name"
+    email: "Email"
+    organisation: "Organisation (optional)"
+    subject: "Subject"
+    subjects:
+      - { value: "presentation", label: "Propose a talk" }
+      - { value: "support", label: "Support X-IA" }
+      - { value: "join", label: "Join X-IA" }
+      - { value: "other", label: "Other" }
+    message: "Message"
+    submit: "Send"
+    sending: "Sending…"
+    success: "Thank you, your message is on its way. We will get back to you shortly."
+    error: "Sending failed. Please write to us directly at"
+    privacy: "Your data is only used to reply to your message."
+footer:
+  line: "An AX group · Non-profit association (law of 1901) · Paris"
+  youtube: "YouTube"
+  linkedin: "LinkedIn"
+  top: "Back to top"
+notfound:
+  title: "Page not found"
+  text: "This page does not exist (any more)."
+  back: "Back to the homepage"
+thanks:
+  title: "Message sent"
+  text: "Thank you, we will get back to you shortly."
+  back: "Back to the homepage"

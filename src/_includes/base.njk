@@ -1,0 +1,77 @@
+{%- import "macros.njk" as m -%}
+{%- set t = i18n[lang] -%}
+{%- set a = anchors or "" -%}
+{%- set homeHref = "/en/" if lang == "en" else "/" -%}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ t.meta.title }}</title>
+  <meta name="description" content="{{ t.meta.description }}">
+  <meta name="theme-color" content="#030e26">
+  <meta property="og:title" content="{{ t.meta.title }}">
+  <meta property="og:description" content="{{ t.meta.description }}">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Netlify Identity : nécessaire pour que les invitations du CMS (/admin) fonctionnent -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">{{ "Aller au contenu" if lang == "fr" else "Skip to content" }}</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="{{ homeHref }}" aria-label="X-IA">
+        <img src="{{ site.logo }}" alt="" width="34" height="34">
+        <span class="brand__name">X-IA</span>
+      </a>
+      <nav class="nav" aria-label="{{ 'Navigation principale' if lang == 'fr' else 'Main navigation' }}">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-{{ lang }}">
+          {{ m.menu() }}<span class="sr">{{ t.nav.menu }}</span>
+        </button>
+        <ul class="nav__list" id="menu-{{ lang }}">
+          <li><a href="{{ a }}#about">{{ t.nav.about }}</a></li>
+          <li><a href="{{ a }}#events">{{ t.nav.events }}</a></li>
+          <li><a href="{{ a }}#supporters">{{ t.nav.supporters }}</a></li>
+          <li><a href="{{ a }}#contact">{{ t.nav.contact }}</a></li>
+        </ul>
+      </nav>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <a href="/" hreflang="fr" lang="fr" data-lang-link="fr"{% if lang == "fr" %} aria-current="true"{% endif %}>FR</a>
+        <a href="/en/" hreflang="en" lang="en" data-lang-link="en"{% if lang == "en" %} aria-current="true"{% endif %}>EN</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p class="foot__line">© {{ "" | year }} X-IA — {{ t.footer.line }}</p>
+      <ul class="foot__links">
+        <li><a href="{{ site.youtube_playlist }}" target="_blank" rel="noopener">{{ t.footer.youtube }}</a></li>
+        <li><a href="{{ site.linkedin }}" target="_blank" rel="noopener">{{ t.footer.linkedin }}</a></li>
+        <li><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></li>
+        <li><a href="#top">{{ t.footer.top }}</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function () { document.location.href = "/admin/"; });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

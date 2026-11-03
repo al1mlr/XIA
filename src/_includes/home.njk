@@ -1,0 +1,154 @@
+{% import "macros.njk" as m %}
+{% set t = i18n[lang] %}
+{% set evs = collections.eventsSorted %}
+{% set thanksHref = "/en/thanks/" if lang == "en" else "/merci/" %}
+
+{# ───────────── Accueil ───────────── #}
+<section class="hero" aria-labelledby="hero-title-{{ lang }}">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">{{ t.hero.eyebrow }}</p>
+      <h1 class="hero__title" id="hero-title-{{ lang }}">{{ t.hero.title }}</h1>
+      <p class="hero__lead">{{ t.hero.lead }}</p>
+      <p class="hero__tag">{{ t.hero.tagline }}</p>
+      <div class="hero__cta">
+        <a class="btn btn--light" href="#events">{{ t.hero.cta_events }}</a>
+        <a class="btn btn--ghost" href="#join">{{ t.hero.cta_join }}</a>
+      </div>
+    </div>
+    <img class="hero__mark" src="{{ site.logo }}" alt="" width="400" height="400">
+  </div>
+  <dl class="wrap facts">
+    {% for f in t.hero.facts %}
+    <div class="facts__item"><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>
+    {% endfor %}
+  </dl>
+</section>
+
+{# ───────────── Qui sommes-nous ───────────── #}
+<section class="about" id="about">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--paper">{{ t.about.eyebrow }}</p>
+    <h2 class="about__headline">{{ t.about.headline }}</h2>
+    <div class="about__grid">
+      <p class="about__statement">{{ t.about.statement }}</p>
+      <div class="about__body">
+        <p class="about__mission">{{ t.about.mission }}</p>
+        <dl class="spec">
+          {% for f in t.about.facts %}
+          <div class="spec__row"><dt>{{ f.term }}</dt><dd>{{ f.text }}</dd></div>
+          {% endfor %}
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ───────────── Nos événements ───────────── #}
+<section class="events" id="events">
+  <div class="wrap">
+    <header class="sec-head">
+      <div>
+        <h2 class="h2">{{ t.events.title }}</h2>
+        <p class="sec-head__intro">{{ t.events.intro }}</p>
+      </div>
+      <a class="link-arrow" href="{{ site.youtube_playlist }}" target="_blank" rel="noopener">{{ t.events.all_label }} {{ m.arrow() }}</a>
+    </header>
+    <div class="events__grid">
+      {% for ev in evs | head(6) %}{{ m.eventCard(ev, lang, t, site) }}{% endfor %}
+    </div>
+    {% set older = evs | tail(6) %}
+    {% if older.length %}
+    <details class="archive">
+      <summary>{{ t.events.archive }} ({{ older.length }})</summary>
+      <div class="events__grid">
+        {% for ev in older %}{{ m.eventCard(ev, lang, t, site) }}{% endfor %}
+      </div>
+    </details>
+    {% endif %}
+  </div>
+</section>
+
+{# ───────────── Ils soutiennent notre action ───────────── #}
+<section class="supporters" id="supporters">
+  <div class="wrap">
+    <header class="sec-head sec-head--stack">
+      <h2 class="h2">{{ t.supporters.title }}</h2>
+      <p class="sec-head__intro">{{ t.supporters.intro }}</p>
+    </header>
+    <ul class="logos">
+      {% for s in supporters.items %}
+      <li class="logos__cell">
+        {% if s.url %}<a class="logos__link" href="{{ s.url }}" target="_blank" rel="noopener noreferrer">{% endif %}
+        {% if s.logo %}<img src="{{ s.logo }}" alt="{{ s.name }}">{% else %}<span class="wordmark">{{ s.name }}</span>{% endif %}
+        {% if s.url %}</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="supporters__cta">{{ t.supporters.cta_text }} <a class="link-arrow" href="#write">{{ t.supporters.cta_link }}</a></p>
+  </div>
+</section>
+
+{# ───────────── Contacts ───────────── #}
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="h2 h2--light">{{ t.contact.title }}</h2>
+    <div class="contact__grid">
+
+      <div class="join" id="join">
+        <p class="kicker">{{ t.contact.join.kicker }}</p>
+        <h3 class="join__title">{{ t.contact.join.title }}</h3>
+        <p class="join__intro">{{ t.contact.join.intro }}</p>
+        <ol class="steps">
+          {% for s in t.contact.join.steps %}<li>{{ s }}</li>{% endfor %}
+        </ol>
+        <p class="join__note">{{ t.contact.join.note }}</p>
+        <p><a class="btn btn--light" href="{{ site.ax_url }}" target="_blank" rel="noopener">{{ t.contact.join.button }} {{ m.arrow() }}</a></p>
+        <p class="join__other">{{ t.contact.join.other }}</p>
+      </div>
+
+      <form class="form" id="write" name="contact" method="POST" action="{{ thanksHref }}"
+            data-netlify="true" netlify-honeypot="bot-field"
+            data-sending="{{ t.contact.form.sending }}" data-success="{{ t.contact.form.success }}"
+            data-error="{{ t.contact.form.error }} {{ site.contact_email }}">
+        <h3 class="form__title">{{ t.contact.form.title }}</h3>
+        <p class="form__intro">{{ t.contact.form.intro }}</p>
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="lang" value="{{ lang }}">
+        <p class="hp" aria-hidden="true"><label>Ne pas remplir <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form__row">
+          <div class="field">
+            <label for="f-name-{{ lang }}">{{ t.contact.form.name }}</label>
+            <input id="f-name-{{ lang }}" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-email-{{ lang }}">{{ t.contact.form.email }}</label>
+            <input id="f-email-{{ lang }}" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="f-org-{{ lang }}">{{ t.contact.form.organisation }}</label>
+            <input id="f-org-{{ lang }}" name="organisation" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-subject-{{ lang }}">{{ t.contact.form.subject }}</label>
+            <select id="f-subject-{{ lang }}" name="subject">
+              {% for o in t.contact.form.subjects %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-message-{{ lang }}">{{ t.contact.form.message }}</label>
+          <textarea id="f-message-{{ lang }}" name="message" rows="5" required></textarea>
+        </div>
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit">{{ t.contact.form.submit }}</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </div>
+        <p class="form__privacy">{{ t.contact.form.privacy }}</p>
+      </form>
+
+    </div>
+  </div>
+</section>

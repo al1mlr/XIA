@@ -1,0 +1,29 @@
+# Entreprises qui soutiennent X-IA (affichées dans cet ordre).
+# Pour afficher un logo : déposez le fichier dans src/assets/img/supporters/ puis renseignez "logo".
+# Sans logo, le nom de l'entreprise s'affiche en lettres.
+# ⚠️ LISTE D'EXEMPLE (entreprises apparaissant sur les visuels d'événements) — à remplacer par la liste réelle.
+items:
+  - name: "Thales"
+    logo: ""
+    url: ""
+  - name: "Dassault Systèmes"
+    logo: ""
+    url: ""
+  - name: "Egis"
+    logo: ""
+    url: ""
+  - name: "LVMH"
+    logo: ""
+    url: ""
+  - name: "BCG X"
+    logo: ""
+    url: ""
+  - name: "Inria"
+    logo: ""
+    url: ""
+  - name: "Datadog"
+    logo: ""
+    url: ""
+  - name: "Hugging Face"
+    logo: ""
+    url: ""
